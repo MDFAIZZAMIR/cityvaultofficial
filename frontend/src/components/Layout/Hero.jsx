@@ -19,7 +19,7 @@ const Hero = () => {
             Curated Vacation Wear — Delivered to You, Anywhere.
           </p>
           <Link
-            to="#"
+            to="/collections/all"
             className="bg-white text-gray-950 px-6 py-2 rounded-sm text-lg"
           >
             Shop Now
