@@ -7,16 +7,16 @@ import {
 } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import {clearCart} from "../../redux/slices/cartSlice"
-import {logout} from "../../redux/slices/authSlice"
+import { clearCart } from "../../redux/slices/cartSlice";
+import { logout } from "../../redux/slices/authSlice";
 
 const AdminSidebar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handLogOut = () => {
-    dispatch(logout())
-    dispatch(clearCart())
+    dispatch(logout());
+    dispatch(clearCart());
     navigate("/");
   };
   return (
@@ -26,8 +26,11 @@ const AdminSidebar = () => {
           CityVault
         </Link>
       </div>
-      <h2 className="text-xl font-medium mb-6 text-center">Admin Dashboard</h2>
-      <nav className="flex flex-col space-y-2">
+      <Link to="/admin" className="text-xl font-medium mb-6 text-center space-y-2.5">
+        Admin Dashboard
+      </Link>
+      {/* <h2 className="text-xl font-medium mb-6 text-center">Admin Dashboard</h2> */}
+      <nav className="flex flex-col space-y-2.5">
         <NavLink
           to="/admin/users"
           className={({ isActive }) =>

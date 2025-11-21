@@ -10,7 +10,7 @@ dotenv.config();
 // Connect to mongoDB
 mongoose.connect(process.env.MONGO_URI);
 
-//Function to seed data
+//Function to seed data 
 
 const seedData = async () => {
   try {
@@ -37,7 +37,7 @@ const seedData = async () => {
     //Insert the products into the database 
     await Product.insertMany(sampleProducts);
 
-    console.log("Product daa seeded successfully! ");
+    console.log("Product data seeded successfully! ");
     process.exit();
 
   } catch (error) {
